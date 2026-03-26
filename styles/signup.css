@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Norse;
+  src: url(../assets/signup-form/Norse-Bold.otf);
+  font-weight: bold;
+}
+
+:root {
+  --odin-font: "Norse";
+  --primary-color: #596d48;
+  --border-color: #e5e7eb;
+}
+
+body {
+  background-color: black;
+  font-family: monospace;
+}
+
+.main-containier {
+  display: flex;
+  width: 70%;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.left-container {
+  position: relative;
+  width: 40%;
+}
+
+.image-container {
+  width: 100%;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100vh;
+}
+
+.logo {
+  width: 100%;
+  height: 150px;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.footer p {
+  font-size: 0.7rem;
+}
+
+.logo img {
+  height: 100px;
+}
+
+.logo h1 {
+  font-family: var(--odin-font);
+  color: white;
+  font-size: 5.5rem;
+}
+
+.right-container {
+  width: 60%;
+}
+
+.form-hero {
+  width: 100%;
+  height: 35%;
+  background-color: #eeeeee;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+}
+
+.form-hero p {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: black;
+}
+
+.form-main {
+  width: 100%;
+  height: 35%;
+  padding: 40px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.form-main p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: black;
+}
+
+.form-main form {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  font-size: 1.2rem;
+  gap: 15px 70px;
+}
+
+.form-main form input {
+  width: 100%;
+  padding: 7px;
+  border: 1px solid var(--border-color);
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+form div {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+input:focus {
+  outline: 1px solid #3673e4;
+  box-shadow: 2px 5px 5px #e5e7eb;
+}
+
+.form-footer {
+  width: 100%;
+  height: 30%;
+  padding: 30px 70px;
+  background-color: #e8e9e8;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-footer button {
+  padding: 10px 35px;
+  border: none;
+  background-color: var(--primary-color);
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 700;
+  font-family: monospace;
+  border-radius: 5px;
+}
+
+.form-footer button:hover {
+  background-color: #3e4b32;
+  cursor: pointer;
+}
+
+.form-footer p {
+  font-size: 1rem;
+}
+
+.form-footer p a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.form-footer p a:hover {
+  text-decoration: underline;
+}
