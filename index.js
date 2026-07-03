@@ -1,35 +1,35 @@
-console.log("Fibonacci sequence");
+// console.log("Fibonacci sequence");
 
-const fibonacciIterative = (n) => {
-  const array = [];
-  let current = 1;
-  let prev = 0;
-  for (let i = 0; i < n; i++) {
-    array.push(current);
-    let next = current + prev;
-    prev = current;
-    current = next;
-  }
-  return array;
-};
-console.log(fibonacciIterative(5));
+// const fibonacciIterative = (n) => {
+//   const array = [];
+//   let current = 1;
+//   let prev = 0;
+//   for (let i = 0; i < n; i++) {
+//     array.push(current);
+//     let next = current + prev;
+//     prev = current;
+//     current = next;
+//   }
+//   return array;s
+// };
+// console.log(fibonacciIterative(5));
 
-const fibonacci = (n) => {
-  if (n <= 1) return n;
-  return fibonacci(n - 1) + fibonacci(n - 2);
-};
+// const fibonacci = (n) => {
+//   if (n <= 1) return n;
+//   return fibonacci(n - 1) + fibonacci(n - 2);
+// };
 
-console.log(fibonacci(5));
+// console.log(fibonacci(5));
 
-const fibonacciSequence = (n) => {
-  const array = [];
-  for (let i = 0; i < n; i++) {
-    array.push(fibonacci(i));
-  }
-  return array;
-};
+// const fibonacciSequence = (n) => {
+//   const array = [];
+//   for (let i = 0; i < n; i++) {
+//     array.push(fibonacci(i));
+//   }
+//   return array;
+// };
 
-console.log(fibonacciSequence(5));
+// console.log(fibonacciSequence(5));
 
 // function createUser(name) {
 //   const discordName = "@" + name;
@@ -65,3 +65,9 @@ console.log(fibonacciSequence(5));
 //   reputation: josh.getReputation(),
 //   level: josh.getLevel(),
 // });
+
+const array = [38, 27, 43, 3, 9, 82, 10, 62];
+
+let newArray = array.sort((a, b) => a - b);
+
+console.log(newArray);
