@@ -1,47 +1,67 @@
-// console.log("Fibonacci sequence");
-// const array = [];
-// let j = 1;
-// let k = 0;
-// for (let i = 0; i <= 10; i++) {
-//   array.push(j);
-//   let m = j + k;
-//   k = j;
-//   j = m;
+console.log("Fibonacci sequence");
+
+const fibonacciIterative = (n) => {
+  const array = [];
+  let current = 1;
+  let prev = 0;
+  for (let i = 0; i < n; i++) {
+    array.push(current);
+    let next = current + prev;
+    prev = current;
+    current = next;
+  }
+  return array;
+};
+console.log(fibonacciIterative(5));
+
+const fibonacci = (n) => {
+  if (n <= 1) return n;
+  return fibonacci(n - 1) + fibonacci(n - 2);
+};
+
+console.log(fibonacci(5));
+
+const fibonacciSequence = (n) => {
+  const array = [];
+  for (let i = 0; i < n; i++) {
+    array.push(fibonacci(i));
+  }
+  return array;
+};
+
+console.log(fibonacciSequence(5));
+
+// function createUser(name) {
+//   const discordName = "@" + name;
+
+//   let reputation = 0;
+//   const getReputation = () => reputation;
+//   const giveReputation = () => {
+//     reputation++;
+//   };
+
+//   return { name, discordName, getReputation, giveReputation };
 // }
-// console.log(array);
 
-function createUser(name) {
-  const discordName = "@" + name;
+// function createPlayer(name, level) {
+//   const { getReputation, giveReputation } = createUser(name);
 
-  let reputation = 0;
-  const getReputation = () => reputation;
-  const giveReputation = () => {
-    reputation++;
-  };
+//   const increaseLevel = () => {
+//     level++;
+//   };
 
-  return { name, discordName, getReputation, giveReputation };
-}
+//   const getLevel = () => level;
+//   return { name, getReputation, giveReputation, increaseLevel, getLevel };
+// }
 
-function createPlayer(name, level) {
-  const { getReputation, giveReputation } = createUser(name);
+// const josh = createPlayer("josh", 1);
+// josh.giveReputation();
+// josh.giveReputation();
+// josh.increaseLevel();
+// josh.increaseLevel();
 
-  const increaseLevel = () => {
-    level++;
-  };
-
-  const getLevel = () => level;
-  return { name, getReputation, giveReputation, increaseLevel, getLevel };
-}
-
-const josh = createPlayer("josh", 1);
-josh.giveReputation();
-josh.giveReputation();
-josh.increaseLevel();
-josh.increaseLevel();
-
-// logs { discordName: "@josh", reputation: 2 }
-console.log({
-  discordName: josh.name,
-  reputation: josh.getReputation(),
-  level: josh.getLevel(),
-});
+// console.log({
+//   discordName: josh.name,
+//   reputation: josh.getReputation(),
+//   level: josh.getLevel(),
+// });
